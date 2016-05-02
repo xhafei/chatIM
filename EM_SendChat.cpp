@@ -23,7 +23,7 @@ EM_SendChat::EM_SendChat(CWnd* pParent /*=NULL*/)
 		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
 	m_bChatting = FALSE;
-	m_pwo = NULL;
+//	m_pwo = NULL;
 }
 
 
@@ -50,22 +50,7 @@ END_MESSAGE_MAP()
 void EM_SendChat::OnChatCancel() 
 {
 	// TODO: Add your control notification handler code here
-	if (! m_bChatting)
-	{
-		CWnd *pWnd = GetParent();
-		pWnd->PostMessage(WM_EMCANCELREQUEST, 2);
 
-		KillTimer(33);
-		CDialog::OnCancel();
-	}
-	else
-	{
-		if (m_pwo)
-			m_pwo->Stop();
-
-		CWnd *pWnd = GetParent();
-		pWnd->PostMessage(WM_EMCANCELREQUEST, 1);
-	}
 }
 
 void EM_SendChat::OnTimer(UINT nIDEvent) 
@@ -120,12 +105,12 @@ BOOL EM_SendChat::DestAcceptChat(LPCTSTR ip)
 
 //	AfxMessageBox(ip);
 	// 启动收听线程
-	m_pwo = (CWaveOut*)AfxBeginThread(
+/*	m_pwo = (CWaveOut*)AfxBeginThread(
 		RUNTIME_CLASS(CWaveOut),
 		THREAD_PRIORITY_HIGHEST, 0, CREATE_SUSPENDED);
 	m_pwo->SetIP(ip);
 	m_pwo->ResumeThread();
-
+*/
 //	GetDlgItem(IDC_STATIC88)->SetWindowText(ip);
 
 	return TRUE;

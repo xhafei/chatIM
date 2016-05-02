@@ -7,7 +7,6 @@
 // EM_RecvChat.h : header file
 //
 #include "EIMChatingWaiter.h"
-#include "WaveOut.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // EM_RecvChat dialog
@@ -21,7 +20,6 @@ public:
 	CProgressCtrl	m_process;
 	BOOL m_bChatting;
 	CString m_strIP;
-	CWaveOut *m_pwo;
 
 // Dialog Data
 	//{{AFX_DATA(EM_RecvChat)

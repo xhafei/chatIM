@@ -339,7 +339,8 @@ void CEIM02Dlg::OnQuit()
 void CEIM02Dlg::OnClose() 
 {
 	// TODO: Add your message handler code here and/or call default
-	//CDialog::OnClose();
+//	CDialog::OnClose();
+	EM_QuitEIM();
 	ShowWindow(SW_HIDE);
 }
 

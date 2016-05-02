@@ -69,12 +69,12 @@ void EM_RecvChat::OnAccept()
 	SetTimer(55, 1000, NULL);
 
 	// 启动收听线程
-	m_pwo = (CWaveOut*)AfxBeginThread(
-	RUNTIME_CLASS(CWaveOut),
-	THREAD_PRIORITY_HIGHEST, 0, CREATE_SUSPENDED);
-	m_pwo->SetIP(m_strIP);
+//	m_pwo = (CWaveOut*)AfxBeginThread(
+//	RUNTIME_CLASS(CWaveOut),
+//	THREAD_PRIORITY_HIGHEST, 0, CREATE_SUSPENDED);
+//	m_pwo->SetIP(m_strIP);
 //	AfxMessageBox(m_strIP);
-	m_pwo->ResumeThread();
+//	m_pwo->ResumeThread();
 
 //	GetDlgItem(IDC_STATIC88)->SetWindowText(m_strIP);
 
@@ -84,20 +84,6 @@ void EM_RecvChat::OnAccept()
 void EM_RecvChat::OnDeny() 
 {
 	// TODO: Add your control notification handler code here
-	if (! m_bChatting)
-	{
-		CWnd *pWnd = GetParent();
-		pWnd->PostMessage(WM_EMDONOTCHAT, 0, sizeof(DWORD));
-		CDialog::OnOK();
-	}
-	else
-	{
-		CWnd *pWnd = GetParent();
-		pWnd->PostMessage(WM_EMDONOTCHAT, 1, sizeof(DWORD));
-
-		if (m_pwo)
-			m_pwo->Stop();
-	}
 }
 
 void EM_RecvChat::OnTimer(UINT nIDEvent) 

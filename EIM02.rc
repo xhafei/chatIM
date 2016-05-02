@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Chinese (P.R.C.) resources
+// Chinese (中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 #ifdef _WIN32
@@ -82,8 +82,7 @@ CAPTION "关于 FreeEIM"
 FONT 9, "宋体"
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,17,15,20,20
-    LTEXT           "FreeEIM 网络飞鸽传书 v3.58 beta",IDC_STATIC,50,14,116,8,
-                    SS_NOPREFIX
+    LTEXT           "FreeEIM",IDC_STATIC,50,14,116,8,SS_NOPREFIX
     DEFPUSHBUTTON   "确定",IDOK,116,99,50,14,WS_GROUP
     LTEXT           "http://www.freeeim.com/",IDC_STATIC,50,25,116,8
     EDITTEXT        IDC_EDIT1,7,48,159,42,ES_MULTILINE | ES_AUTOVSCROLL | 
@@ -98,7 +97,7 @@ CAPTION "FreeEIM"
 MENU IDR_MENU1
 FONT 9, "宋体"
 BEGIN
-    LTEXT           "FreeEIM v3.58",IDC_STATIC,4,235,93,8
+    LTEXT           "FreeEIM v1",IDC_STATIC,4,235,93,8
     CONTROL         "",IDC_LOADGIF,"Static",SS_BLACKFRAME,46,77,27,22
     LTEXT           "正在查找在线用户,请稍侯...",IDC_LOADING,9,117,107,8
     CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",WS_TABSTOP,0,26,127,
@@ -112,21 +111,22 @@ END
 
 IDD_DIALOG1 DIALOGEX 0, 0, 269, 246
 STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
-FONT 9, "宋体", 0, 0, 0x1
+FONT 9, "宋体"
 BEGIN
     CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",ES_MULTILINE | 
                     ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_BORDER | 
                     WS_VSCROLL,5,5,257,118,WS_EX_STATICEDGE
-    PUSHBUTTON      "关闭(&C)",IDC_BUTTON1,158,223,50,14
-    PUSHBUTTON      "发送(&S)",IDC_BUTTON2,218,223,50,14
-    PUSHBUTTON      "发送文件(&F)",IDC_BUTTON_FILE,81,223,50,14
-    LTEXT           ".",IDC_STATIC_PROMPT,5,231,15,8
-    PUSHBUTTON      "语音对话(&V)",IDC_VOICECHAT,24,223,50,14
-    PUSHBUTTON      "抖",IDC_SHAKE,137,223,15,14
+    PUSHBUTTON      "关闭(&C)",IDC_BUTTON1,86,225,32,14
+    PUSHBUTTON      "发送(&S)",IDC_BUTTON2,123,225,35,14
+    PUSHBUTTON      "发送文件(&F)",IDC_BUTTON_FILE,9,225,50,14
+    LTEXT           ".",IDC_STATIC_PROMPT,5,225,15,8
+    PUSHBUTTON      "抖",IDC_SHAKE,65,225,15,14
     CONTROL         "",IDC_RICHEDIT2,"RICHEDIT",ES_MULTILINE | 
                     ES_AUTOVSCROLL | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | 
                     WS_TABSTOP,5,139,257,78
     LTEXT           "Static",IDC_STATIC_FACE,5,123,258,16
+    PUSHBUTTON      "关闭(&C)",IDC_BUTTON3,164,225,39,14
+    PUSHBUTTON      "发送(&S)",IDC_BUTTON4,206,225,39,14
 END
 
 IDD_USER_SETTING DIALOG DISCARDABLE  0, 0, 198, 127
@@ -170,7 +170,7 @@ END
 IDD_SENDFILE_DIALOG DIALOGEX 0, 0, 120, 110
 STYLE DS_CONTROL | WS_CHILD
 EXSTYLE WS_EX_STATICEDGE
-FONT 9, "宋体", 0, 0, 0x1
+FONT 9, "宋体"
 BEGIN
     PUSHBUTTON      "取消",IDCANCEL,86,24,21,11
     ICON            IDR_MAINFRAME,IDC_STATIC_ICON,3,2,20,20
@@ -200,28 +200,6 @@ BEGIN
     LTEXT           "接收已完成！",IDC_STATIC_COMPLETED,28,15,48,8
     PUSHBUTTON      "另存为",IDC_BUTTON_SAVE_AS,32,19,28,11
     PUSHBUTTON      "拒收",IDC_BUTTON_DENY,74,19,34,11
-END
-
-IDD_VOICE1 DIALOG DISCARDABLE  0, 0, 264, 28
-STYLE DS_CONTROL | WS_CHILD
-FONT 9, "宋体"
-BEGIN
-    DEFPUSHBUTTON   "不接听(&N)",IDC_DENY,204,6,50,14
-    PUSHBUTTON      "接听(&A)",IDC_ACCEPT,148,6,50,14
-    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
-                    45,10,96,7
-    LTEXT           "语音对话",IDC_STATIC8,6,10,36,8
-    LTEXT           "",IDC_STATIC6,47,1,80,8
-END
-
-IDD_VOICE2 DIALOG DISCARDABLE  0, 0, 264, 26
-STYLE DS_CONTROL | WS_CHILD
-FONT 9, "宋体"
-BEGIN
-    PUSHBUTTON      "挂机(&N)",IDC_CANCEL,204,6,50,14
-    LTEXT           "语音对话    正在等待对方接受，请稍候",IDC_STATIC6,7,10,
-                    145,8
-    LTEXT           "",IDC_STATIC8,154,10,41,8
 END
 
 IDD_VIEWHISTORY DIALOGEX 0, 0, 288, 260
@@ -270,15 +248,15 @@ BEGIN
         BEGIN
             VALUE "Comments", "FreeEIM\0"
             VALUE "CompanyName", "FEIM Studios\0"
-            VALUE "FileDescription", "A Free Enterprise Instant Messenger\0"
-            VALUE "FileVersion", "3, 5, 0, 1\0"
+            VALUE "FileDescription", "Free Enterprise Instant Messenger\0"
+            VALUE "FileVersion", " 1\0"
             VALUE "InternalName", "freeeim\0"
-            VALUE "LegalCopyright", "Copyright (C) 2010 FEIM Studios\0"
+            VALUE "LegalCopyright", "\0"
             VALUE "LegalTrademarks", "\0"
-            VALUE "OriginalFilename", "freeeim.exe\0"
+            VALUE "OriginalFilename", "freeim.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "FreeEIM\0"
-            VALUE "ProductVersion", "3, 5, 0, 1\0"
+            VALUE "ProductVersion", "1\0"
             VALUE "SpecialBuild", "Simple Chinese\0"
         END
     END
@@ -484,7 +462,7 @@ BEGIN
     IDS_STRING_DESCRIPTION  "网络飞鸽传书是一款很实用的局域网聊天工具，可以发送文字、文件、文件夹，语言对话等。软件是开源软件，开发者可以自行定制更适合自己的软件。"
 END
 
-#endif    // Chinese (P.R.C.) resources
+#endif    // Chinese (中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

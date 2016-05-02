@@ -7,7 +7,6 @@
 // EM_SendChat.h : header file
 //
 
-#include "WaveOut.h"
 #include "EIMChatingWaiter.h"
 
 /////////////////////////////////////////////////////////////////////////////
@@ -18,7 +17,6 @@ class EM_SendChat : public CDialog
 // Construction
 public:
 	BOOL m_bChatting;
-	CWaveOut *m_pwo;
 	CEIMChatingWaiter *m_cw;
 	BOOL DestAcceptChat(LPCTSTR ip);
 	EM_SendChat(CWnd* pParent = NULL);   // standard constructor

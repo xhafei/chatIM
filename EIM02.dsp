@@ -213,14 +213,6 @@ SOURCE=.\UserSettingDlg.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\WaveIn.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=.\WaveOut.cpp
-# End Source File
-# Begin Source File
-
 SOURCE=.\webbrowser2.cpp
 # End Source File
 # Begin Source File
@@ -354,14 +346,6 @@ SOURCE=.\thirdpartclass\SystemTray.h
 # Begin Source File
 
 SOURCE=.\UserSettingDlg.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\WaveIn.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\WaveOut.h
 # End Source File
 # Begin Source File
 

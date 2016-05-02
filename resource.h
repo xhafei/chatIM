@@ -45,6 +45,7 @@
 #define IDC_BUTTON3                     1009
 #define IDC_VOICECHAT                   1009
 #define IDC_COMBO1                      1010
+#define IDC_BUTTON4                     1010
 #define IDC_STATIC1                     1011
 #define IDC_STATIC2                     1012
 #define IDC_STATIC3                     1013

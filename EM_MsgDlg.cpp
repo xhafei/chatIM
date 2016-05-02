@@ -60,18 +60,19 @@ void EM_MsgDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(EM_MsgDlg, CDialog)
 	//{{AFX_MSG_MAP(EM_MsgDlg)
+	ON_COMMAND_RANGE(ID_BUTTON32794, ID_BUTTON32809, OnFaceSelect)
 	ON_BN_CLICKED(IDC_BUTTON2, OnBtnSend)
 	ON_BN_CLICKED(IDC_BUTTON1, OnBtnClose)
 	ON_BN_CLICKED(IDC_SHAKE, OnBtnShake)
 	ON_MESSAGE(WM_UPDATEDLG, OnUpdateDlg)
+	ON_BN_CLICKED(IDC_BUTTON_FILE, OnBtnSendFile)
+	ON_WM_TIMER()
 	ON_MESSAGE(WM_EMDONOTCHAT, Voice_OnDoNotChat)
 	ON_MESSAGE(WM_EMCANCELREQUEST, Voice_CancelRequest)
 	ON_MESSAGE(WM_SRCACCEPTCHAT, Voice_SrcAcceptChat)
-	ON_BN_CLICKED(IDC_BUTTON_FILE, OnBtnSendFile)
-	ON_BN_CLICKED(IDC_VOICECHAT, Voice_Request)
-	ON_WM_TIMER()
 	ON_WM_DROPFILES()
-	ON_COMMAND_RANGE(ID_BUTTON32794, ID_BUTTON32809, OnFaceSelect)
+	ON_BN_CLICKED(IDC_VOICECHAT, Voice_Request)
+	ON_BN_CLICKED(IDC_BUTTON3, OnButton3)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -1639,4 +1640,10 @@ void EM_MsgDlg::_InitHistoryToday()
 
 	// 试滚动条滚动到最后一行
 	m_RichEditShow.PostMessage(WM_VSCROLL, SB_BOTTOM,0);
+}
+
+void EM_MsgDlg::OnButton3() 
+{
+	// TODO: Add your control notification handler code here
+	
 }

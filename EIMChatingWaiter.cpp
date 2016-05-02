@@ -95,7 +95,6 @@ BOOL CEIMChatingWaiter::Listen()
 			break;
 		}
 
-		m_wi = new CWaveIn(Accept);
 	}
 
 	return TRUE;
@@ -103,10 +102,12 @@ BOOL CEIMChatingWaiter::Listen()
 
 void CEIMChatingWaiter::Stop()
 {
+	/*
 	if (m_wi)
 	{
 	//	AfxMessageBox("ÓïÒôÍ£Ö¹ÁË");
 		m_wi->StopRecord();
 		m_wi = NULL;
 	}
+	*/
 }

@@ -7,8 +7,6 @@
 // EIMChatingWaiter.h : header file
 //
 
-#include "WaveIn.h"
-
 /////////////////////////////////////////////////////////////////////////////
 // CEIMChatingWaiter thread
 
@@ -19,8 +17,6 @@ protected:
 	CEIMChatingWaiter();           // protected constructor used by dynamic creation
 
 // Attributes
-public:
-	CWaveIn *m_wi;
 
 // Operations
 public:

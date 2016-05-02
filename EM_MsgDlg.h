@@ -148,6 +148,7 @@ protected:
 	afx_msg void Voice_CancelRequest(WPARAM wParam, LPARAM lParam);
 	afx_msg void Voice_SrcAcceptChat(WPARAM wParam, LPARAM lParam);
 	afx_msg void OnDropFiles(HDROP hDropInfo);
+	afx_msg void OnButton3();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
