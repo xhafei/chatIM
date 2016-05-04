@@ -62,7 +62,6 @@ public:
 	void File_RecvFile(SOCKET sock);
 	void AddRecvText(LPCTSTR msg);
 	void AddSendText(LPCTSTR msg);
-	void Voice_AddText(LPCTSTR msg);
 	void File_ResAcceptFile(ENLINK *pLink);
 	void File_ResDenyFile(ENLINK *pLink);
 	void NewFile(LPEM_FILEINFO fInfo);
@@ -70,7 +69,7 @@ public:
 	void File_DestDenyFile(LPEM_FILEINFO fInfo);
 	void File_DestAcceptFile(LPEM_FILEINFO fInfo);
 	void File_RecvCancel(LPEM_FILEINFO pFinfo);
-
+	void Voice_AddText(LPCTSTR msg);
 
 
 
@@ -149,6 +148,7 @@ protected:
 	afx_msg void Voice_SrcAcceptChat(WPARAM wParam, LPARAM lParam);
 	afx_msg void OnDropFiles(HDROP hDropInfo);
 	afx_msg void OnButton3();
+	afx_msg void OnButton4();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

@@ -71,8 +71,9 @@ BEGIN_MESSAGE_MAP(EM_MsgDlg, CDialog)
 	ON_MESSAGE(WM_EMCANCELREQUEST, Voice_CancelRequest)
 	ON_MESSAGE(WM_SRCACCEPTCHAT, Voice_SrcAcceptChat)
 	ON_WM_DROPFILES()
-	ON_BN_CLICKED(IDC_VOICECHAT, Voice_Request)
 	ON_BN_CLICKED(IDC_BUTTON3, OnButton3)
+	ON_BN_CLICKED(IDC_VOICECHAT, Voice_Request)
+	ON_BN_CLICKED(IDC_BUTTON4, OnButton4)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -544,19 +545,19 @@ void EM_MsgDlg::AddSendText(LPCTSTR msg)
 }
 
 
-void EM_MsgDlg::Voice_AddText(LPCTSTR msg)
-{
-	CTime m_StartTime1 = CTime::GetCurrentTime();
-	// 信息 发送者 和 发送时间
-	CString str;
-	str.Format("%s %s\r\n", m_StartTime1.Format(_T("%H:%M:%S")), msg);
-	int iTotalTextLength = m_RichEditShow.GetWindowTextLength();
-	m_RichEditShow.SetSel(iTotalTextLength, iTotalTextLength);
-	m_RichEditShow.ReplaceSel((LPCTSTR)str);
-
-	// 试滚动条滚动到最后一行
-	m_RichEditShow.LineScroll(1);
-}
+ void EM_MsgDlg::Voice_AddText(LPCTSTR msg)
+ {
+ 	CTime m_StartTime1 = CTime::GetCurrentTime();
+ 	// 信息 发送者 和 发送时间
+ 	CString str;
+ 	str.Format("%s %s\r\n", m_StartTime1.Format(_T("%H:%M:%S")), msg);
+ 	int iTotalTextLength = m_RichEditShow.GetWindowTextLength();
+ 	m_RichEditShow.SetSel(iTotalTextLength, iTotalTextLength);
+ 	m_RichEditShow.ReplaceSel((LPCTSTR)str);
+ 
+ 	// 试滚动条滚动到最后一行
+ 	m_RichEditShow.LineScroll(1);
+ }
 
 EM_MsgDlg::~EM_MsgDlg()
 {
@@ -1643,6 +1644,12 @@ void EM_MsgDlg::_InitHistoryToday()
 }
 
 void EM_MsgDlg::OnButton3() 
+{
+	// TODO: Add your control notification handler code here
+	
+}
+
+void EM_MsgDlg::OnButton4() 
 {
 	// TODO: Add your control notification handler code here
 	

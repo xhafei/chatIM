@@ -1,4 +1,9 @@
 *.o
+
 *.a
+
 *.txt
+
 Debug
+
+Release

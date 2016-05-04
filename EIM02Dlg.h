@@ -136,7 +136,7 @@ public:
 	map<HTREEITEM, string> m_mapUsers;
 
 	// 更新处理
-	CWebBrowser2 m_webBrowser;
+//	CWebBrowser2 m_webBrowser;
 
 	// 历史记录
 	FreeEIM_History m_history;

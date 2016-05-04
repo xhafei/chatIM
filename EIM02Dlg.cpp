@@ -102,7 +102,7 @@ void CEIM02Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_TREE1, m_treeCtrlList);
 //	DDX_Control(pDX, IDC_TAB1, m_tabCtrlFunction);
 	DDX_Control(pDX, IDC_LOADGIF, m_pictureLoading);
-	DDX_Control(pDX, IDC_EXPLORER1, m_webBrowser);
+//	DDX_Control(pDX, IDC_EXPLORER1, m_webBrowser);
 	//}}AFX_DATA_MAP
 }
 
