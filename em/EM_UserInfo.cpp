@@ -1,9 +1,4 @@
-// Author: Alex
-// Date: 2007-2-10
-// 更新日期：2009年12月5日
 // 更新内容：去掉一些修改注册表的代码，目的是让程序更绿色；
-// 作者：蔡子楠（http://www.freeeim.com/）
-// Download by http://www.codefans.net
 #include "StdAfx.h"
 #include "winsock2.h"
 #include "EM_UserInfo.h"

@@ -27,25 +27,20 @@ public:
 	BOOL IsConnected();
 
 	// 功能：连接 MS ACCESS 数据库；
-	// 更细日期：2009年11月17日
 	BOOL ConnectAccess(const char *szMDB);
 
 	// 功能：查询某条记录是否存在；
-	// 更细日期：2009年11月17日
 	BOOL RecordExists(LPCTSTR szSQL);
 
 	// 功能：执行一条 SQL 语句；
-	// 更细日期：2009年11月17日
 	BOOL ExecuteCommand(LPCTSTR szSQL);
 
 	DWORD GetIdByCondition(LPCTSTR szCondition);
 
 	// 功能：按条件读取某个字段的内容；
-	// 更细日期：2009年11月17日
 	void GetField(const char* szTable, const char *szField, const char *szCondition, char *szData);
 
 	// 功能：连接 MS SQL 类型数据库；
-	// 更细日期：2009年11月17日
 	BOOL ConnectSQL(LPCTSTR server, LPCTSTR db, LPCTSTR user, LPCTSTR password);
 
 	_RecordsetPtr &GetChatText(const char *szIdone, const char *szIdtwo, const char *szLastTime);

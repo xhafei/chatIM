@@ -35,7 +35,7 @@
 
 #include "winsock2.h"
 
-/* 暂时取消 2009年12月3日 受影响函数 GetMac();
+/* 暂时取消受影响函数 GetMac();
 #include "sensapi.h"
 #pragma comment(lib, "sensapi.lib")
 */
@@ -44,7 +44,7 @@
 #include "mmsystem.h"
 #pragma comment(lib, "winmm.lib")
 
-/* 暂时取消了。2009年12月3日
+/* 暂时取消了
 #include "htmlhelp.h"
 #pragma comment(lib, "htmlhelp.lib")
 */

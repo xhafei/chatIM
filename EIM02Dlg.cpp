@@ -294,8 +294,8 @@ void CEIM02Dlg::EM_OnInitDlg()
 
 	// 启动语音对话处理线程
 	// 启动录音接受线程
-	m_cw = (CEIMChatingWaiter*)
-		AfxBeginThread(RUNTIME_CLASS(CEIMChatingWaiter),THREAD_PRIORITY_HIGHEST);
+//	m_cw = (CEIMChatingWaiter*)
+//		AfxBeginThread(RUNTIME_CLASS(CEIMChatingWaiter),THREAD_PRIORITY_HIGHEST);
 
 }
 

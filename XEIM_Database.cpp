@@ -234,7 +234,6 @@ DWORD XEIM_Database::GetIdByCondition(LPCTSTR szCondition)
 }
 
 // 功能：按条件读取某个字段的内容；
-// 更细日期：2009年11月17日
 void XEIM_Database::GetField(const char* szTable, const char *szField, const char *szCondition, char *szData)
 {
 	HRESULT hr;

@@ -3,10 +3,12 @@
 
 #include "stdafx.h"
 #include "EIM02.h"
+#include "EIM02Dlg.h"
 #include "em/stdemdef.h"
 #include "EM_MsgDlg.h"
 #include "EIM02Dlg.h"
 #include "ImageDataObject.h"
+#include "em/EM_UserTree.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -1651,6 +1653,7 @@ void EM_MsgDlg::OnButton3()
 
 void EM_MsgDlg::OnButton4() 
 {
-	// TODO: Add your control notification handler code here
-	
+	//EM_UserTree userTreeList = 
+//	(CEIM02Dlg::m_treeCtrlList).ShowWindow(SW_SHOW);
+//	RedrawWindow();	
 }

@@ -2,7 +2,7 @@
 #include "EIM02Dlg.h"
 #include "FreeEIM_History.h"
 #include "XEIM_Database.h"
-// Download by http://www.codefans.net
+
 FreeEIM_History::FreeEIM_History()
 {
 	m_pDB = &(XEIM_Database::GetDB());

@@ -1,14 +1,4 @@
-// Author:Alex Thai
-// Coding Date: 2007-4-18
-// This header file is deisgned for Enterprise Instance Messenger.
 
-// 1 Message Definition ----------------------------------------------------------------------------
-// 2 EM_Data Class Definition ----------------------------------------------------------------------
-// 3 Ports for socket Definition -------------------------------------------------------------------
-// 4 Custom Windows Message Definition -------------------------------------------------------------
-// 5 Function Definition ---------------------------------------------------------------------------
-// 6 Data Structure definition ---------------------------------------------------------------------
-// 7 Macro Definition ------------------------------------------------------------------------------
 // 飞鸽传书源码
 #ifndef STDEMDEF_H
 #define STDEMDEF_H
@@ -187,6 +177,7 @@ public:
 		memcpy(m_bDate,date,len);
 		m_nDateLen = len;
 	}
+
 
 	char *GetBuffer()  // 使用此函数必须这样:char *tmp = GetBuffer; delete tmp;不然会内存泄漏
 	{

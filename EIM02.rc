@@ -127,8 +127,8 @@ BEGIN
     LTEXT           "Static",IDC_STATIC_FACE,5,123,258,16
     PUSHBUTTON      "¹Ø±Õ(&C)",IDC_BUTTON3,164,225,39,14
     PUSHBUTTON      "·¢ËÍ(&S)",IDC_BUTTON4,206,225,39,14
-    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",WS_TABSTOP,268,37,110,
-                    169
+    CONTROL         "List1",IDC_LIST1,"SysListView32",WS_BORDER | WS_TABSTOP,
+                    278,15,86,94
 END
 
 IDD_USER_SETTING DIALOG DISCARDABLE  0, 0, 198, 127
