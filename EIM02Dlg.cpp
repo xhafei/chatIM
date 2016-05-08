@@ -517,7 +517,6 @@ void CEIM02Dlg::OnEM_DblClickTree(WPARAM wParam, LPARAM lParam)
 			if ( GetForegroundWindow() != GetTopLevelParent() )
 			{
 				//CWnd* pParentWnd = GetTopLevelParent();
-				/// 2009年12月3日
 			/*	if ( HINSTANCE hUser = LoadLibrary( _T("User32") ) )
 				{
 					BOOL (WINAPI *pfnFlashWindowEx)(PFLASHWINFO pfwi);
@@ -537,14 +536,13 @@ void CEIM02Dlg::OnEM_DblClickTree(WPARAM wParam, LPARAM lParam)
 					}
 					FreeLibrary( hUser );
 				}*/
-				/// 2009年12月3日
 			}
 		}
 	}
 }
 
 
-// 暂时取消，原因是函数无法执行 2009年12月3日
+// 暂时取消，原因是函数无法执行
 void CEIM02Dlg::OnHelptopic() 
 {
 	// TODO: Add your command handler code here
@@ -783,7 +781,7 @@ void CEIM02Dlg::EM_Reflesh(WPARAM wParam, LPARAM lParam)
 // 右键菜单 -> 群发
 void CEIM02Dlg::EM_SendAll(WPARAM wParam, LPARAM lParam)
 {
-	AfxMessageBox("7788999群发功能正在改善中");
+	
 /*	if (NULL == m_Chatdlg[255])
 	{
 		m_Chatdlg[255] = new EM_MsgDlg;
@@ -908,15 +906,17 @@ void CEIM02Dlg::OnRelesh()
 
 void CEIM02Dlg::SendMSGToAll(LPEM_DATA lpData)
 {
-	MessageBox("SendMSGToAll");
+//	MessageBox("SendMSGToAll");
+	int memNum=m_treeCtrlList.GetCount();
 /*	ASSERT( NULL != lpData );
-	for (int i=0; i<255; i++)
+*/	
+	
+	
+	for(map<HTREEITEM, string>::iterator i = m_mapUsers.begin(); i != m_mapUsers.end(); ++i)
 	{
-		if (NULL != m_treeCtrlList.m_szPCName[i])
-		{
-			m_MSGrecv.SendMsg(m_treeCtrlList.m_szUserIP[i], lpData);
-		}
-	}*/
+		m_MSGrecv.SendMsg(const_cast<char*>((*i).second.c_str()), lpData);
+	}
+
 }
 
 void CEIM02Dlg::OnSendall() 
@@ -1569,53 +1569,6 @@ HTREEITEM CEIM02Dlg::_User_GetUserItem(LPCTSTR lpszIP)
 
 	return NULL;
 }
-
-/* 不让用户自启动，其他方案解决 2009年12月3日
-void CEIM02Dlg::_Init_Autorun()
-{
-	CRegistry regMyReg( NULL );
-	if ( regMyReg.Open("Software\\Microsoft\\Windows\\CurrentVersion\\Run", HKEY_CURRENT_USER) )
-	{
-		CMenu *pMenu = GetMenu();
-		// 注册键存在
-		if ( regMyReg["tsapp"].Exists() )
-		{
-		//	pMenu->CheckMenuItem(IDM_AUTORUN, MF_BYCOMMAND|MF_CHECKED);
-			CString strValue = (LPTSTR)regMyReg["tsapp"];
-
-			if (strValue.IsEmpty())
-			{	// 空白代表不自启动
-			}
-			else
-			{	// 更新启动值
-				char szFileName[_MAX_PATH];
-				::GetModuleFileName(NULL, szFileName, _MAX_PATH);
-				strcat(szFileName, " system_tray");
-				regMyReg["tsapp"] = szFileName;
-				pMenu->CheckMenuItem(IDM_AUTORUN, MF_BYCOMMAND|MF_CHECKED);
-			}
-		}
-		else // 不存在
-		{
-			// 更新启动值
-			char szFileName[_MAX_PATH];
-			::GetModuleFileName(NULL, szFileName, _MAX_PATH);
-			strcat(szFileName, " system_tray");
-			regMyReg["tsapp"] = szFileName;
-			pMenu->CheckMenuItem(IDM_AUTORUN, MF_BYCOMMAND|MF_CHECKED);
-		}
-
-		pMenu->Detach();
-		regMyReg.Close();
-	}
-	else
-	{
-		AfxMessageBox("Unable to open key!", MB_OK | MB_ICONHAND);
-	}
-}
-*/
-
-
 
 
 // 对方用户修改部门名称

@@ -58,17 +58,15 @@ public:
 
 
 	// 功能：获取当前程序所在目录
-	// 更新日期：2009年12月5日
 	void GetProgramDirectory(char *buf);
 	CString GetAppDir();
 
 
 	// 功能：获取指定计算机的名称
-	// 更新日期：2009年12月5日
 	CString GetComputerName();
 
 
-	// 本机用户配置信息；2009年12月5日
+	// 本机用户配置信息；
 	FreeEIM_Config m_config;
 
 	BOOL m_bVoiceChat; // 正在进行一个语音对话

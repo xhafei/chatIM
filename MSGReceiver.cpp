@@ -1,7 +1,6 @@
 #include "StdAfx.h"
 #include "EIM02Dlg.h"
 #include "MSGReceiver.h"
-// Download by http://www.codefans.net
 BOOL EM_MSGReceiver::m_bMessageReceiving = TRUE;
 
 EM_MSGReceiver::EM_MSGReceiver()
@@ -61,7 +60,6 @@ DWORD WINAPI EM_MSGReceiver::UDPMsgProc(LPVOID lParam)
 		}
 		else
 		{
-			// 看不顺眼啊
 			EM_DATA data(buf, sinLen);
 
 			char ip[128];
@@ -147,7 +145,7 @@ DWORD WINAPI EM_MSGReceiver::UDPMsgProc(LPVOID lParam)
 			}
 		}
 	}
-	return 0;//没素质
+	return 0;
 }
 
 void EM_MSGReceiver::Run(const HWND hWnd)

@@ -2,39 +2,38 @@
 
 [General Info]
 Version=1
-LastClass=_DLG_Advertise
+LastClass=
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "EIM02.h"
 
-ClassCount=11
+ClassCount=10
 Class1=CEIM02App
 Class2=CEIM02Dlg
 Class3=CAboutDlg
 
 ResourceCount=15
-Resource1=IDD_DIALOG1
+Resource1=IDD_EIM02_DIALOG
 Resource2=IDR_MAINFRAME
-Resource3=IDR_SYSTEMTRAY
+Resource3=IDD_FILERECV_DIALOG
 Resource4=IDD_VOICE1
-Resource5=IDR_MENU2
+Resource5=IDD_SENDFILE_DIALOG
 Class4=EM_MsgDlg
 Resource6=IDD_VOICE2
 Class5=CUserSettingDlg
-Resource7=IDD_EIM02_DIALOG
+Resource7=IDD_DIALOG1
 Class6=EM_UserProperty
-Resource8=IDD_FILERECV_DIALOG
-Resource9=IDR_MENU1
+Resource8=IDD_USER_SETTING
+Resource9=IDD_VIEWHISTORY
 Resource10=IDD_ABOUTBOX
-Resource11=IDD_DIALOG2
+Resource11=IDR_MENU1
 Class7=EM_RecvChat
-Resource12=IDD_VIEWHISTORY
+Resource12=IDR_MENU2
 Class8=EM_SendChat
-Resource13=IDD_SENDFILE_DIALOG
+Resource13=IDD_DIALOG2
 Class9=EIM_ViewHistory
-Resource14=IDD_USER_SETTING
+Resource14=IDR_SYSTEMTRAY
 Class10=CFIM_SerialNumberDlg
-Class11=_DLG_Advertise
 Resource15=IDR_TOOLBAR_FACE
 
 [CLS:CEIM02App]
@@ -117,7 +116,7 @@ Control7=IDC_RICHEDIT2,RICHEDIT,1352732740
 Control8=IDC_STATIC_FACE,static,1342308352
 Control9=IDC_BUTTON3,button,1342242816
 Control10=IDC_BUTTON4,button,1342242816
-Control11=IDC_LIST1,SysListView32,1350631424
+Control11=IDC_LIST1,SysListView32,1350631427
 
 [CLS:EM_MsgDlg]
 Type=0
@@ -293,13 +292,4 @@ Command13=ID_BUTTON32806
 Command14=ID_BUTTON32807
 Command15=ID_BUTTON32808
 CommandCount=15
-
-[CLS:_DLG_Advertise]
-Type=0
-HeaderFile=_DLG_Advertise.h
-ImplementationFile=_DLG_Advertise.cpp
-BaseClass=CDialog
-Filter=D
-LastObject=_DLG_Advertise
-VirtualFilter=dWC
 

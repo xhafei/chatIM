@@ -1,7 +1,6 @@
 #include "StdAfx.h"
 #include "EIM02Dlg.h"
 #include "freeeim_message_logic.h"
-// Download by http://www.codefans.net
 
 FreeEIM_Message_Logic::FreeEIM_Message_Logic()
 {

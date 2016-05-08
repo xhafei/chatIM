@@ -1656,4 +1656,58 @@ void EM_MsgDlg::OnButton4()
 	//EM_UserTree userTreeList = 
 //	(CEIM02Dlg::m_treeCtrlList).ShowWindow(SW_SHOW);
 //	RedrawWindow();	
+		// TODO: Add your control notification handler code here
+	CString strSend;
+	m_richInput.GetWindowText(strSend);
+	// 如果用户什么也没输入按发送,就提示输入
+	if (strSend.IsEmpty())
+	{
+		// 考虑要不要提示，先直接返回
+		m_richInput.SetFocus();
+		return;
+	}
+
+	//获取RichEdit中有几个bitmap，这里假设RichEdit中有位图文件
+	int c = m_richInput.GetIRichEditOle()->GetObjectCount();     
+
+	int pos;
+	DWORD dwUser;
+	int nPos=0;
+	CString strFace;
+	for(int i = 0 ; i < c ; i++) //遍历位图
+	{
+		REOBJECT object;  //位图信息存在这里
+		memset(&object,0,sizeof(REOBJECT));
+		object.cbStruct = sizeof(REOBJECT);
+		m_richInput.GetIRichEditOle()->GetObject(i,&object,REO_GETOBJ_ALL_INTERFACES);
+
+		pos = object.cp ; //位图的位置信息
+		dwUser = object.dwUser; //位图的信息，之前应用程序设置的，应有程序当然知道什么意思了
+		strFace.Format("_FreeEIM_Emotion_%d", dwUser);
+		strSend.Delete(pos+nPos,1);
+		strSend.Insert(pos+nPos, strFace);
+		nPos += strFace.GetLength()-1;
+	}
+
+	EM_DATA data;
+	data.msg = EM_TEXT;
+	data.buf = (LPSTR)(LPCTSTR)strSend;
+	data.len = strSend.GetLength() + 1;
+
+	// 是群发还是单独发
+	if (1)
+	{
+		m_pMainTop->SendMSGToAll(&data);
+	//	FreeEIM_User_Logic::PostMessageToGroup(HTREEITEM hItem,&data);
+	}
+	else
+	{
+	//	EM_USERINFO ui(m_szUserPCName, m_szUserIP);
+	//	SetWindowText(m_szUserIP);
+		m_pMainTop->m_MSGrecv.SendMsg((LPSTR)(LPCTSTR)m_strUserIP, &data);
+	}
+	AddSendText((LPCTSTR)strSend);
+
+	m_richInput.SetWindowText("");
+	m_richInput.SetFocus();
 }
