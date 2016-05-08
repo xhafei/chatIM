@@ -180,6 +180,10 @@ SOURCE=.\thirdpartclass\GetHardSoftInfo.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\groupChat.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\ImageDataObject.cpp
 # End Source File
 # Begin Source File
@@ -310,6 +314,10 @@ SOURCE=.\freeeim_user_logic.h
 # Begin Source File
 
 SOURCE=.\thirdpartclass\GetHardSoftInfo.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\groupChat.h
 # End Source File
 # Begin Source File
 

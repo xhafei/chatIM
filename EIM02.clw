@@ -2,39 +2,41 @@
 
 [General Info]
 Version=1
-LastClass=
+LastClass=groupChat
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "EIM02.h"
 
-ClassCount=10
+ClassCount=11
 Class1=CEIM02App
 Class2=CEIM02Dlg
 Class3=CAboutDlg
 
-ResourceCount=15
-Resource1=IDD_EIM02_DIALOG
+ResourceCount=16
+Resource1=IDD_DIALOG1
 Resource2=IDR_MAINFRAME
-Resource3=IDD_FILERECV_DIALOG
+Resource3=IDD_VIEWHISTORY
 Resource4=IDD_VOICE1
-Resource5=IDD_SENDFILE_DIALOG
+Resource5=IDD_ABOUTBOX
 Class4=EM_MsgDlg
 Resource6=IDD_VOICE2
 Class5=CUserSettingDlg
-Resource7=IDD_DIALOG1
+Resource7=IDD_FILERECV_DIALOG
 Class6=EM_UserProperty
 Resource8=IDD_USER_SETTING
-Resource9=IDD_VIEWHISTORY
-Resource10=IDD_ABOUTBOX
-Resource11=IDR_MENU1
+Resource9=IDR_MENU1
+Resource10=IDD_SENDFILE_DIALOG
+Resource11=IDR_SYSTEMTRAY
 Class7=EM_RecvChat
-Resource12=IDR_MENU2
+Resource12=IDD_DIALOG6
 Class8=EM_SendChat
 Resource13=IDD_DIALOG2
 Class9=EIM_ViewHistory
-Resource14=IDR_SYSTEMTRAY
+Resource14=IDR_MENU2
 Class10=CFIM_SerialNumberDlg
-Resource15=IDR_TOOLBAR_FACE
+Resource15=IDD_EIM02_DIALOG
+Class11=groupChat
+Resource16=IDR_TOOLBAR_FACE
 
 [CLS:CEIM02App]
 Type=0
@@ -86,7 +88,7 @@ Control8=IDC_EXPLORER1,{8856F961-340A-11D0-A96B-00C04FD705A2},1342242816
 
 [MNU:IDR_MENU1]
 Type=1
-Class=?
+Class=groupChat
 Command1=IDM_RELESH
 Command2=IDM_SENDALL
 Command3=IDM_VIEWHISTORY
@@ -170,6 +172,7 @@ ImplementationFile=EM_UserProperty.cpp
 BaseClass=CDialog
 Filter=D
 LastObject=EM_UserProperty
+VirtualFilter=dWC
 
 [MNU:IDR_MENU2]
 Type=1
@@ -292,4 +295,25 @@ Command13=ID_BUTTON32806
 Command14=ID_BUTTON32807
 Command15=ID_BUTTON32808
 CommandCount=15
+
+[DLG:IDD_DIALOG6]
+Type=1
+Class=groupChat
+ControlCount=7
+Control1=IDOK,button,1342242817
+Control2=IDCANCEL,button,1342242816
+Control3=IDC_RICHEDIT1,RICHEDIT,1352669252
+Control4=IDC_RICHEDIT2,RICHEDIT,1352732740
+Control5=IDC_LIST1,SysListView32,1350631427
+Control6=IDC_STATIC_FACE,static,1342308352
+Control7=IDCANCEL2,button,1342242816
+
+[CLS:groupChat]
+Type=0
+HeaderFile=groupChat.h
+ImplementationFile=groupChat.cpp
+BaseClass=CDialog
+Filter=D
+LastObject=groupChat
+VirtualFilter=dWC
 

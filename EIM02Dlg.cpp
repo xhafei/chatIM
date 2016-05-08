@@ -207,7 +207,6 @@ BOOL CEIM02Dlg::OnInitDialog()
 	//CreateToday_sFile();
 
 	// 检查更新
-	EM_CheckForUpdate("http://www.freeeim.com/?v=3.28");
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
@@ -380,29 +379,6 @@ void CEIM02Dlg::EM_HideLoading()
 	RedrawWindow();
 
 	m_bIsLogin = TRUE;
-
-
-
-	//////////////////////////////////////////////////////////////////////////
-	// 广告模块
-/*	m_pAdv = new _DLG_Advertise;
-	m_pAdv->Create(_DLG_Advertise::IDD, this);
-	if (::IsWindow(m_pAdv->GetSafeHwnd()))
-	{
-		CRect rtTree;
-		m_treeCtrlList.GetWindowRect(& rtTree);
-		ScreenToClient(& rtTree);
-		CRect rtAdv;
-		m_pAdv->GetWindowRect(& rtAdv);
-		ScreenToClient(& rtAdv);
-		rtAdv.top = rtTree.bottom;
-		rtAdv.bottom = rtTree.bottom + rtAdv.bottom;
-		rtAdv.right = rtTree.right;
-
-		m_pAdv->MoveWindow(& rtAdv);
-		m_pAdv->ShowWindow(SW_SHOW);
-	}*/
-	//////////////////////////////////////////////////////////////////////////
 }
 
 void CEIM02Dlg::OnAbouteim() 
@@ -492,7 +468,7 @@ void CEIM02Dlg::OnEM_DblClickTree(WPARAM wParam, LPARAM lParam)
 		{
 			pDlg->ShowWindow(SW_MINIMIZE);
 
-			/// 2009年12月3日
+	
 			/*CWnd* pParentWnd = GetTopLevelParent();
 			if ( HINSTANCE hUser = LoadLibrary( _T("User32") ) )
 			{
@@ -510,7 +486,7 @@ void CEIM02Dlg::OnEM_DblClickTree(WPARAM wParam, LPARAM lParam)
 				}
 				FreeLibrary( hUser );
 			}*/
-			/// 2009年12月3日
+		
 		}
 		else
 		{
@@ -694,7 +670,7 @@ void CEIM02Dlg::EM_UserSetting()
 	dlg.DoModal();
 }
 
-/* 2009年12月3日 // 不让用户自动启动，用其他方案解决
+/*  // 不让用户自动启动，用其他方案解决
 void CEIM02Dlg::EM_OnAutorun() 
 {
 	// TODO: Add your command handler code here

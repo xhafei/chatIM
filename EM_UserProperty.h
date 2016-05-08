@@ -35,7 +35,7 @@ protected:
 
 	// Generated message map functions
 	//{{AFX_MSG(EM_UserProperty)
-		// NOTE: the ClassWizard will add member functions here
+	afx_msg void OnOk();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
