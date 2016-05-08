@@ -1,15 +1,3 @@
-// ImageDataObject.h: Impementation for IDataObject Interface to be used 
-//					     in inserting bitmap to the RichEdit Control.
-//
-// Author : Hani Atassi  (atassi@arabteam2000.com)
-//
-// How to use : Just call the static member InsertBitmap with 
-//				the appropriate parrameters. 
-//
-// Known bugs :
-// Download by http://www.codefans.net
-//
-//////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
 #include "ImageDataObject.h"

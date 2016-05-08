@@ -6,6 +6,49 @@
 --------------------Configuration: EIM02 - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/EIM02.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\Administrator\Desktop\freeeim_FreeEIM\EIM02.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5241.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/freeeim.pdb" /debug /machine:I386 /out:"Debug/freeeim.exe" /pdbtype:sept 
+.\Debug\EIM02.obj
+.\Debug\EIM02Dlg.obj
+.\Debug\EIM_ViewHistory.obj
+.\Debug\EIMChatingWaiter.obj
+.\Debug\EM_FileReceiving.obj
+.\Debug\EM_FileSendingDlg.obj
+.\Debug\EM_GroupInfo.obj
+.\Debug\EM_MsgDlg.obj
+.\Debug\EM_RecvChat.obj
+.\Debug\EM_SendChat.obj
+.\Debug\EM_UserInfo.obj
+.\Debug\EM_UserLogin.obj
+.\Debug\EM_UserProperty.obj
+.\Debug\EM_UserTree.obj
+.\Debug\EMRichEdit.obj
+.\Debug\freeeim_config.obj
+.\Debug\freeeim_history.obj
+.\Debug\freeeim_message_logic.obj
+.\Debug\freeeim_package.obj
+.\Debug\freeeim_user_logic.obj
+.\Debug\GetHardSoftInfo.obj
+.\Debug\groupChat.obj
+.\Debug\ImageDataObject.obj
+.\Debug\INI.obj
+.\Debug\MSGReceiver.obj
+.\Debug\PictureEx.obj
+.\Debug\StdAfx.obj
+.\Debug\stdemdef.obj
+.\Debug\SystemTray.obj
+.\Debug\UserSettingDlg.obj
+.\Debug\webbrowser2.obj
+.\Debug\WinAppEx.obj
+.\Debug\XEIM_Database.obj
+.\Debug\EIM02.res
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5241.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
 
 
 

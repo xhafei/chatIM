@@ -1644,11 +1644,12 @@ void EM_MsgDlg::_InitHistoryToday()
 	// 试滚动条滚动到最后一行
 	m_RichEditShow.PostMessage(WM_VSCROLL, SB_BOTTOM,0);
 }
-
+#include "groupChat.h"
 void EM_MsgDlg::OnButton3() 
 {
 	// TODO: Add your control notification handler code here
-	
+	groupChat dlg;
+	dlg.DoModal();
 }
 
 void EM_MsgDlg::OnButton4() 
