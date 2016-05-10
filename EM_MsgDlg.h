@@ -112,6 +112,7 @@ public:
 // Dialog Data
 	//{{AFX_DATA(EM_MsgDlg)
 	enum { IDD = IDD_DIALOG1 };
+	CListCtrl	m_userList;
 	EM_MsgRichEdit	m_richInput; // ÏûÏ¢·¢ËÍ¿ò
 	//}}AFX_DATA
 

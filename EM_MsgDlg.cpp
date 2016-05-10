@@ -54,6 +54,7 @@ void EM_MsgDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(EM_MsgDlg)
+	DDX_Control(pDX, IDC_LIST1, m_userList);
 	DDX_Control(pDX, IDC_RICHEDIT2, m_richInput);
 	DDX_Control(pDX, IDC_RICHEDIT1, m_RichEditShow);
 	//}}AFX_DATA_MAP
@@ -102,6 +103,37 @@ BOOL EM_MsgDlg::OnInitDialog()
 	CString strTitle;
 	strTitle.Format(_T("与 %s 的对话"), m_strDisplayName);
 	SetWindowText(strTitle);
+    
+
+	m_userList.DeleteAllItems();
+	m_userList.InsertColumn(0,_T("用户名"),LVCFMT_LEFT,80);
+	m_userList.InsertColumn(1,_T("IP"),LVCFMT_LEFT,150);
+//	m_userList.SetColumnWidth(0,100);
+//	m_userList.SetExtendedStyle ( LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES );
+//	m_userList.InsertItem (0, "abc");
+//	MessageBox("hi");MessageBox(tempIp.c_str());
+	
+	for(map<HTREEITEM, string>::iterator i = (*m_pMainTop).m_mapUsers.begin(); i != (*m_pMainTop).m_mapUsers.end(); ++i)
+	{
+		TVITEM temp;
+		string tempName;
+		string tempIp;
+		tempIp = const_cast<char*>((*i).second.c_str());
+        HTREEITEM temi = i->first;
+		tempName = (*m_pMainTop).m_treeCtrlList.GetItemText(temi);
+//		MessageBox(tempIp.c_str());
+		m_userList.InsertItem (0, tempName.c_str());
+		m_userList.InsertItem (1, tempIp.c_str());
+		m_userList.SetItemText(0,0,tempName.c_str());
+		m_userList.SetItemText(0,1,tempIp.c_str());
+		
+/*		
+		m_userList.InsertItem (0, (*i).first->lpszName);
+		m_userList.InsertItem (1, i->second);
+		m_MSGrecv.SendMsg(const_cast<char*>((*i).second.c_str()), lpData);
+*/	}
+     
+	m_userList.SetRedraw(TRUE);
 
 	return FALSE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE

@@ -2,7 +2,6 @@
 // Microsoft Developer Studio generated include file.
 // Used by EIM02.rc
 //
-#define IDCANCEL2                       3
 #define IDM_ABOUTBOX                    0x0010
 #define IDD_ABOUTBOX                    100
 #define IDS_ABOUTBOX                    101
@@ -35,7 +34,7 @@
 #define IDR_TOOLBAR_FACE                154
 #define IDB_BITMAP4                     157
 #define IDD_DIALOG_AD                   158
-#define IDD_DIALOG6                     161
+#define IDD_DIALOG6                     162
 #define IDC_TAB1                        1000
 #define IDC_LOADING                     1001
 #define IDC_LOADGIF                     1002
@@ -126,7 +125,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        162
+#define _APS_NEXT_RESOURCE_VALUE        163
 #define _APS_NEXT_COMMAND_VALUE         32811
 #define _APS_NEXT_CONTROL_VALUE         1040
 #define _APS_NEXT_SYMED_VALUE           101

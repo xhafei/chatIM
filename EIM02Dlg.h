@@ -1,8 +1,5 @@
 // EIM02Dlg.h : header file
 // 飞鸽传书 FreeEIM 主程序
-// 更新日期：2009年12月3日
-// 作者：蔡镇秋(freeeim@gmail.com)
-// 飞鸽传书官方网站：http://www.freeeim.com/
 // 功能：控制整体实现
 
 #if !defined(AFX_EIM02DLG_H__4D50BAB8_62C8_4203_A64B_2027BD828241__INCLUDED_)

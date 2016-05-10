@@ -2,7 +2,7 @@
 
 [General Info]
 Version=1
-LastClass=groupChat
+LastClass=EM_MsgDlg
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "EIM02.h"
@@ -13,30 +13,30 @@ Class2=CEIM02Dlg
 Class3=CAboutDlg
 
 ResourceCount=16
-Resource1=IDR_SYSTEMTRAY
+Resource1=IDD_ABOUTBOX
 Resource2=IDR_MAINFRAME
-Resource3=IDD_SENDFILE_DIALOG
+Resource3=IDD_DIALOG6
 Resource4=IDD_VOICE1
-Resource5=IDR_MENU1
+Resource5=IDD_EIM02_DIALOG
 Class4=EM_MsgDlg
 Resource6=IDD_VOICE2
 Class5=CUserSettingDlg
-Resource7=IDD_FILERECV_DIALOG
+Resource7=IDD_USER_SETTING
 Class6=EM_UserProperty
-Resource8=IDR_MENU2
-Resource9=IDD_USER_SETTING
-Resource10=IDD_EIM02_DIALOG
-Resource11=IDD_DIALOG1
+Resource8=IDD_SENDFILE_DIALOG
+Resource9=IDR_TOOLBAR_FACE
+Resource10=IDR_MENU2
+Resource11=IDD_VIEWHISTORY
 Class7=EM_RecvChat
-Resource12=IDD_DIALOG2
+Resource12=IDR_MENU1
 Class8=EM_SendChat
-Resource13=IDD_ABOUTBOX
+Resource13=IDD_FILERECV_DIALOG
 Class9=EIM_ViewHistory
-Resource14=IDD_VIEWHISTORY
+Resource14=IDD_DIALOG2
 Class10=CFIM_SerialNumberDlg
-Resource15=IDD_DIALOG6
+Resource15=IDR_SYSTEMTRAY
 Class11=groupChat
-Resource16=IDR_TOOLBAR_FACE
+Resource16=IDD_DIALOG1
 
 [CLS:CEIM02App]
 Type=0
@@ -88,7 +88,7 @@ Control8=IDC_EXPLORER1,{8856F961-340A-11D0-A96B-00C04FD705A2},1342242816
 
 [MNU:IDR_MENU1]
 Type=1
-Class=groupChat
+Class=?
 Command1=IDM_RELESH
 Command2=IDM_SENDALL
 Command3=IDM_VIEWHISTORY
@@ -118,7 +118,7 @@ Control7=IDC_RICHEDIT2,RICHEDIT,1352732740
 Control8=IDC_STATIC_FACE,static,1342308352
 Control9=IDC_BUTTON3,button,1342242816
 Control10=IDC_BUTTON4,button,1342242816
-Control11=IDC_LIST1,SysListView32,1350631427
+Control11=IDC_LIST1,SysListView32,1342242817
 
 [CLS:EM_MsgDlg]
 Type=0
@@ -126,7 +126,7 @@ HeaderFile=EM_MsgDlg.h
 ImplementationFile=EM_MsgDlg.cpp
 BaseClass=CDialog
 Filter=D
-LastObject=EM_MsgDlg
+LastObject=IDC_LIST1
 VirtualFilter=dWC
 
 [DLG:IDD_USER_SETTING]
@@ -296,19 +296,6 @@ Command14=ID_BUTTON32807
 Command15=ID_BUTTON32808
 CommandCount=15
 
-[DLG:IDD_DIALOG6]
-Type=1
-Class=groupChat
-ControlCount=8
-Control1=IDOK,button,1342242817
-Control2=IDCANCEL,button,1342242816
-Control3=IDC_RICHEDIT1,RICHEDIT,1352669252
-Control4=IDC_RICHEDIT2,RICHEDIT,1352732740
-Control5=IDC_LIST1,SysListView32,1350631427
-Control6=IDC_STATIC_FACE,static,1342308352
-Control7=IDCANCEL2,button,1342242816
-Control8=IDC_SHAKE,button,1342242816
-
 [CLS:groupChat]
 Type=0
 HeaderFile=groupChat.h
@@ -316,5 +303,15 @@ ImplementationFile=groupChat.cpp
 BaseClass=CDialog
 Filter=D
 LastObject=groupChat
-VirtualFilter=dWC
+
+[DLG:IDD_DIALOG6]
+Type=1
+Class=groupChat
+ControlCount=6
+Control1=IDOK,button,1342242817
+Control2=IDCANCEL,button,1342242816
+Control3=IDC_LIST1,SysListView32,1350631427
+Control4=IDC_RICHEDIT1,RICHEDIT,1352669252
+Control5=IDC_RICHEDIT2,RICHEDIT,1352732740
+Control6=IDC_STATIC_FACE,static,1342308352
 
