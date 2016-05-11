@@ -107,7 +107,7 @@ BOOL EM_MsgDlg::OnInitDialog()
 
 	m_userList.DeleteAllItems();
 	m_userList.InsertColumn(0,_T("用户名"),LVCFMT_LEFT,80);
-	m_userList.InsertColumn(1,_T("IP"),LVCFMT_LEFT,150);
+	m_userList.InsertColumn(1,_T("IP(选中用户名群发)"),LVCFMT_LEFT,150);
 //	m_userList.SetColumnWidth(0,100);
 //	m_userList.SetExtendedStyle ( LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES );
 //	m_userList.InsertItem (0, "abc");
@@ -115,22 +115,43 @@ BOOL EM_MsgDlg::OnInitDialog()
 	
 	for(map<HTREEITEM, string>::iterator i = (*m_pMainTop).m_mapUsers.begin(); i != (*m_pMainTop).m_mapUsers.end(); ++i)
 	{
-		TVITEM temp;
 		string tempName;
 		string tempIp;
 		tempIp = const_cast<char*>((*i).second.c_str());
         HTREEITEM temi = i->first;
 		tempName = (*m_pMainTop).m_treeCtrlList.GetItemText(temi);
 //		MessageBox(tempIp.c_str());
+//		m_userList.InsertItem (1, "lily");
+//		m_userList.InsertItem(0);
+//		m_userList.SetItemText(0,0,tempName.c_str());
 		m_userList.InsertItem (0, tempName.c_str());
-		m_userList.InsertItem (1, tempIp.c_str());
-		m_userList.SetItemText(0,0,tempName.c_str());
 		m_userList.SetItemText(0,1,tempIp.c_str());
+		m_userList.InsertItem (1, "tom");
+		m_userList.SetItemText(1,1,tempIp.c_str());
 		
 /*		
 		m_userList.InsertItem (0, (*i).first->lpszName);
 		m_userList.InsertItem (1, i->second);
 		m_MSGrecv.SendMsg(const_cast<char*>((*i).second.c_str()), lpData);
+
+		string str;
+		POSITION pos=m_userList.GetFirstSelectedItemPosition(); //pos选中的首行位置
+		if(pos==NULL)
+			AfxMessageBox("no item were selected!");
+		else
+		{
+			while(pos) //如果选择多行
+			{
+				int nIdx=-1;
+				nIdx= m_userList.GetNextSelectedItem(pos);
+
+				if(nIdx >=0&&nIdx<m_userList.GetItemCount())
+				{
+					str =m_userList.GetItemText(nIdx,0);
+				}
+			}
+		}
+	    MessageBox(str.c_str());
 */	}
      
 	m_userList.SetRedraw(TRUE);
@@ -1730,7 +1751,26 @@ void EM_MsgDlg::OnButton4()
 	// 是群发还是单独发
 	if (1)
 	{
-		m_pMainTop->SendMSGToAll(&data);
+		string str;
+		POSITION pos=m_userList.GetFirstSelectedItemPosition(); //pos选中的首行位置
+		if(pos==NULL)
+			AfxMessageBox("no item were selected!");
+		else
+		{
+			while(pos) //如果选择多行
+			{
+				int nIdx=-1;
+				nIdx= m_userList.GetNextSelectedItem(pos);
+
+				if(nIdx >=0&&nIdx<m_userList.GetItemCount())
+				{
+					str = m_userList.GetItemText(nIdx,1);
+					m_pMainTop->m_MSGrecv.SendMsg((char*)str.c_str(), &data);
+				}
+			}
+		}
+
+	//	m_pMainTop->SendMSGToAll(&data);
 	//	FreeEIM_User_Logic::PostMessageToGroup(HTREEITEM hItem,&data);
 	}
 	else
