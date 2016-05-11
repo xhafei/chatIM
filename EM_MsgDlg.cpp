@@ -694,7 +694,6 @@ void EM_MsgDlg::NewFile(LPEM_FILEINFO fInfo)
 
 
 // 功能：发送文件
-// 更新日期：2009年12月12日
 void EM_MsgDlg::OnBtnSendFile()
 {
 	// 由于对话框太小，最多只能容纳 6 个文件传输对话框
@@ -1697,12 +1696,97 @@ void EM_MsgDlg::_InitHistoryToday()
 	// 试滚动条滚动到最后一行
 	m_RichEditShow.PostMessage(WM_VSCROLL, SB_BOTTOM,0);
 }
-#include "groupChat.h"
+//#include "groupChat.h"
 void EM_MsgDlg::OnButton3() 
 {
 	// TODO: Add your control notification handler code here
-	groupChat dlg;
-	dlg.DoModal();
+//	groupChat dlg;
+//	dlg.DoModal();
+
+
+
+		// 由于对话框太小，最多只能容纳 6 个文件传输对话框
+	if (m_dwSendTotal >= 6)
+	{
+		MessageBox(_T("Beta 版最多只能处理6个文件！\r\n等其它文件处理完再继续。"), _T("警告"), MB_OK | MB_ICONWARNING);
+		return;
+	}
+
+	// 文件打开操作
+	CFileDialog dlgFileOpen(TRUE, NULL, NULL, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT, NULL, this);
+
+	int structsize=0;
+	DWORD dwVersion,dwWindowsMajorVersion,dwWindowsMinorVersion;
+
+	//检测目前的操作系统，GetVersion具体用法详见MSDN
+	dwVersion = GetVersion();
+	dwWindowsMajorVersion = (DWORD)(LOBYTE(LOWORD(dwVersion)));
+	dwWindowsMinorVersion = (DWORD)(HIBYTE(LOWORD(dwVersion)));
+
+	// 如果运行的操作系统是Windows NT/2000
+	if (dwVersion < 0x80000000)
+	{
+		structsize =88;//显示新的文件对话框
+	}
+	else//运行的操作系统Windows 95/98
+	{
+		structsize =76;//显示老的文件对话框
+	}
+	
+	dlgFileOpen.m_ofn.lStructSize=structsize;
+//	TCHAR lpstrFilename[MAX_PATH] = _T("");
+//	dlgFileOpen.m_ofn.lpstrFile=lpstrFilename;
+
+	if(dlgFileOpen.DoModal()==IDOK)
+	{
+		// Add file to fileinfo list.
+		for (int i=0; i<6; i++)
+		{
+			if (m_SendfileInfo[i] == NULL)
+			{
+				m_SendfileInfo[i] = new EM_FILEINFO;
+				m_SendfileInfo[i]->dwSendFileIndex = i;
+				break;
+			}
+		}
+
+		m_SendfileInfo[i]->AddFile(dlgFileOpen.GetPathName(), dlgFileOpen.GetFileExt());
+		m_dwSendTotal ++;
+
+		EM_DATA data;
+		data.buf = (char*)m_SendfileInfo[i];
+
+		data.msg = EM_FILE;
+		data.len = sizeof(EM_FILEINFO);
+	    
+		string str;
+		POSITION pos=m_userList.GetFirstSelectedItemPosition(); //pos选中的首行位置
+		if(pos==NULL)
+			AfxMessageBox("no item were selected!");
+		else
+		{
+			int nIdx=0;
+			while(pos) //如果选择多行
+			{
+				nIdx=-1;
+				nIdx= m_userList.GetNextSelectedItem(pos);
+
+				if(nIdx>=0 && nIdx<m_userList.GetItemCount())
+				{
+					str = m_userList.GetItemText(nIdx,1);
+
+					m_pMainTop->m_MSGrecv.SendMsg((char*)str.c_str(), & data);
+					int iTotalTextLength = m_RichEditShow.GetWindowTextLength();
+					m_RichEditShow.SetSel(iTotalTextLength, iTotalTextLength);
+					CString cstr;
+					cstr.Format(_T("你向 %s 发送文件:%s \r\n"), m_strDisplayName, ((LPEM_FILEINFO)data.buf)->FileName());
+					m_RichEditShow.ReplaceSel((LPCTSTR)cstr);
+					m_RichEditShow.LineScroll(1);
+				}
+			}
+		}
+
+	}
 }
 
 void EM_MsgDlg::OnButton4() 
@@ -1736,7 +1820,7 @@ void EM_MsgDlg::OnButton4()
 		m_richInput.GetIRichEditOle()->GetObject(i,&object,REO_GETOBJ_ALL_INTERFACES);
 
 		pos = object.cp ; //位图的位置信息
-		dwUser = object.dwUser; //位图的信息，之前应用程序设置的，应有程序当然知道什么意思了
+		dwUser = object.dwUser; //位图的信息
 		strFace.Format("_FreeEIM_Emotion_%d", dwUser);
 		strSend.Delete(pos+nPos,1);
 		strSend.Insert(pos+nPos, strFace);

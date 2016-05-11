@@ -35,9 +35,15 @@ void groupChat::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(groupChat, CDialog)
 	//{{AFX_MSG_MAP(groupChat)
-		// NOTE: the ClassWizard will add message map macros here
+	ON_BN_CLICKED(IDOK, OnOk)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // groupChat message handlers
+
+void groupChat::OnOk() 
+{
+	// TODO: Add your control notification handler code here
+	
+}

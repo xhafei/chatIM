@@ -13,30 +13,30 @@ Class2=CEIM02Dlg
 Class3=CAboutDlg
 
 ResourceCount=16
-Resource1=IDR_MENU1
+Resource1=IDD_EIM02_DIALOG
 Resource2=IDR_MAINFRAME
-Resource3=IDD_USER_SETTING
+Resource3=IDD_VIEWHISTORY
 Resource4=IDD_VOICE1
-Resource5=IDD_VIEWHISTORY
+Resource5=IDR_MENU2
 Class4=EM_MsgDlg
 Resource6=IDD_VOICE2
 Class5=CUserSettingDlg
-Resource7=IDR_SYSTEMTRAY
+Resource7=IDD_DIALOG1
 Class6=EM_UserProperty
-Resource8=IDD_ABOUTBOX
-Resource9=IDD_DIALOG6
-Resource10=IDD_FILERECV_DIALOG
-Resource11=IDR_TOOLBAR_FACE
+Resource8=IDD_DIALOG6
+Resource9=IDD_ABOUTBOX
+Resource10=IDR_SYSTEMTRAY
+Resource11=IDD_SENDFILE_DIALOG
 Class7=EM_RecvChat
-Resource12=IDD_DIALOG2
+Resource12=IDD_USER_SETTING
 Class8=EM_SendChat
-Resource13=IDR_MENU2
+Resource13=IDD_FILERECV_DIALOG
 Class9=EIM_ViewHistory
-Resource14=IDD_EIM02_DIALOG
+Resource14=IDD_DIALOG2
 Class10=CFIM_SerialNumberDlg
-Resource15=IDD_SENDFILE_DIALOG
+Resource15=IDR_MENU1
 Class11=groupChat
-Resource16=IDD_DIALOG1
+Resource16=IDR_TOOLBAR_FACE
 
 [CLS:CEIM02App]
 Type=0
@@ -90,12 +90,11 @@ Control8=IDC_EXPLORER1,{8856F961-340A-11D0-A96B-00C04FD705A2},1342242816
 Type=1
 Class=?
 Command1=IDM_RELESH
-Command2=IDM_SENDALL
-Command3=IDM_VIEWHISTORY
-Command4=IDM_QUITEIM
-Command5=IDM_SHOWNAME
-Command6=IDM_ABOUTEIM
-CommandCount=6
+Command2=IDM_VIEWHISTORY
+Command3=IDM_QUITEIM
+Command4=IDM_SHOWNAME
+Command5=IDM_ABOUTEIM
+CommandCount=5
 
 [MNU:IDR_SYSTEMTRAY]
 Type=1
@@ -126,7 +125,7 @@ HeaderFile=EM_MsgDlg.h
 ImplementationFile=EM_MsgDlg.cpp
 BaseClass=CDialog
 Filter=D
-LastObject=IDC_LIST1
+LastObject=IDC_RICHEDIT1
 VirtualFilter=dWC
 
 [DLG:IDD_USER_SETTING]
@@ -303,6 +302,7 @@ ImplementationFile=groupChat.cpp
 BaseClass=CDialog
 Filter=D
 LastObject=groupChat
+VirtualFilter=dWC
 
 [DLG:IDD_DIALOG6]
 Type=1
