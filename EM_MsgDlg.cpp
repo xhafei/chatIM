@@ -112,8 +112,8 @@ BOOL EM_MsgDlg::OnInitDialog()
 //	m_userList.SetExtendedStyle ( LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES );
 //	m_userList.InsertItem (0, "abc");
 //	MessageBox("hi");MessageBox(tempIp.c_str());
-	
-	for(map<HTREEITEM, string>::iterator i = (*m_pMainTop).m_mapUsers.begin(); i != (*m_pMainTop).m_mapUsers.end(); ++i)
+	int num = 0;
+	for(map<HTREEITEM, string>::iterator i = (*m_pMainTop).m_mapUsers.begin(); i != (*m_pMainTop).m_mapUsers.end(); ++i,num++)
 	{
 		string tempName;
 		string tempIp;
@@ -124,10 +124,9 @@ BOOL EM_MsgDlg::OnInitDialog()
 //		m_userList.InsertItem (1, "lily");
 //		m_userList.InsertItem(0);
 //		m_userList.SetItemText(0,0,tempName.c_str());
-		m_userList.InsertItem (0, tempName.c_str());
-		m_userList.SetItemText(0,1,tempIp.c_str());
-		m_userList.InsertItem (1, "tom");
-		m_userList.SetItemText(1,1,tempIp.c_str());
+		m_userList.InsertItem (num, tempName.c_str());
+		m_userList.SetItemText(num,1,tempIp.c_str());
+	
 		
 /*		
 		m_userList.InsertItem (0, (*i).first->lpszName);
@@ -251,7 +250,7 @@ void EM_MsgDlg::OnBtnShake()
 	int recordy=m_rect.left;
 	int recordx=m_rect.top;
 
-	for(int i=0;i<5;i++)
+	for(int i=0;i<1;i++)
 	{
 		m_rect.left=recordy;
 		m_rect.top=recordx;
@@ -1702,10 +1701,26 @@ void EM_MsgDlg::OnButton3()
 	// TODO: Add your control notification handler code here
 //	groupChat dlg;
 //	dlg.DoModal();
+/*    
+ BROWSEINFO  bi;
+ bi.hwndOwner=NULL;
+ bi.pidlRoot=NULL;
+ bi.pszDisplayName=NULL;
+ bi.lpszTitle=NULL;
+ bi.ulFlags=0;
+ bi.lpfn =NULL;
+ bi.iImage =0;
+ LPCITEMIDLIST pidl=SHBrowseForFolder(&bi);
+ if(!pidl)
+  return;
+ TCHAR  szDisplayName[255];
+ SHGetPathFromIDList(pidl,szDisplayName);
+ CString str(szDisplayName);
+ MessageBox(str,NULL,MB_OK);
 
-
-
-		// 由于对话框太小，最多只能容纳 6 个文件传输对话框
+return;
+*/
+	// 由于对话框太小，最多只能容纳 6 个文件传输对话框
 	if (m_dwSendTotal >= 6)
 	{
 		MessageBox(_T("Beta 版最多只能处理6个文件！\r\n等其它文件处理完再继续。"), _T("警告"), MB_OK | MB_ICONWARNING);
