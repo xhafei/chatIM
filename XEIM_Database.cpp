@@ -1,6 +1,5 @@
 #include "StdAfx.h"
 #include "XEIM_Database.h"
-// Download by http://www.codefans.net
 static XEIM_Database dbOnlyOne;
 bool XEIM_Database::m_bStart = false;
 

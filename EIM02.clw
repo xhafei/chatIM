@@ -13,28 +13,28 @@ Class2=CEIM02Dlg
 Class3=CAboutDlg
 
 ResourceCount=16
-Resource1=IDD_DIALOG2
+Resource1=IDD_EIM02_DIALOG
 Resource2=IDR_MAINFRAME
-Resource3=IDR_MENU1
+Resource3=IDD_FILERECV_DIALOG
 Resource4=IDD_VOICE1
-Resource5=IDD_DIALOG1
+Resource5=IDD_ABOUTBOX
 Class4=EM_MsgDlg
 Resource6=IDD_VOICE2
 Class5=CUserSettingDlg
-Resource7=IDD_EIM02_DIALOG
+Resource7=IDR_MENU1
 Class6=EM_UserProperty
-Resource8=IDR_SYSTEMTRAY
-Resource9=IDD_USER_SETTING
-Resource10=IDD_ABOUTBOX
-Resource11=IDD_VIEWHISTORY
+Resource8=IDD_VIEWHISTORY
+Resource9=IDR_MENU2
+Resource10=IDR_SYSTEMTRAY
+Resource11=IDD_DIALOG2
 Class7=EM_RecvChat
-Resource12=IDD_SENDFILE_DIALOG
+Resource12=IDD_USER_SETTING
 Class8=EM_SendChat
-Resource13=IDD_DIALOG6
+Resource13=IDD_SENDFILE_DIALOG
 Class9=EIM_ViewHistory
-Resource14=IDD_FILERECV_DIALOG
+Resource14=IDD_DIALOG1
 Class10=CFIM_SerialNumberDlg
-Resource15=IDR_MENU2
+Resource15=IDD_DIALOG6
 Class11=groupChat
 Resource16=IDR_TOOLBAR_FACE
 
@@ -66,12 +66,11 @@ VirtualFilter=dWC
 [DLG:IDD_ABOUTBOX]
 Type=1
 Class=CAboutDlg
-ControlCount=5
+ControlCount=4
 Control1=IDC_STATIC,static,1342177283
 Control2=IDC_STATIC,static,1342308480
 Control3=IDOK,button,1342373889
-Control4=IDC_STATIC,static,1342308352
-Control5=IDC_EDIT1,edit,1352730692
+Control4=IDC_EDIT1,edit,1352730692
 
 [DLG:IDD_EIM02_DIALOG]
 Type=1

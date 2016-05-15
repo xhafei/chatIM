@@ -101,12 +101,11 @@ void CFIM_SerialNumberDlg::OnOK()
 //	strSN.TrimRight();
 
 	CString strURL;
-	strURL.Format(_T("http://www.coopic.cn/ts/user_register.asp"
-		"?sn=%s&bs=%s"), strSN, strCode);
+//	strURL.Format(_T("http://www.coopic.cn/ts/user_register.asp"
+//		"?sn=%s&bs=%s"), strSN, strCode);
 
 //	AfxMessageBox(strURL);
 //	SetDlgItemText(IDC_EDIT6, strURL);
-//	m_ctrlWeb.Navigate( _T("http://www.coopic.cn/ts/user_login.asp?login=WEIH100045869635&bs=WEIH100045869635"), NULL, NULL, NULL,NULL);
 	m_ctrlWeb.Navigate(strURL, NULL, NULL, NULL,NULL);
 }
 
@@ -146,8 +145,6 @@ BOOL CFIM_SerialNumberDlg::OnInitDialog()
 	{
 	//	AfxMessageBox(_T("Èí¼þÒÑ×¢²á£¡"));
 		CString strURL;
-		strURL.Format(_T("http://www.coopic.cn/ts/user_login.asp"
-			"?login=%s&bs=%s"), m_strSN, strCode);
 
 	//	SetDlgItemText(IDC_EDIT6, strURL);
 		m_ctrlWeb.Navigate(strURL, NULL, NULL, NULL,NULL);

@@ -1,6 +1,5 @@
 #include "StdAfx.h"
 #include "em_GroupInfo.h"
-// Download by http://www.codefans.net
 EM_GroupInfo::EM_GroupInfo()
 {
 	strcpy(m_szGroupName[GROUP_ADMINISTRATION], _T("ÐÐÕþ²¿"));

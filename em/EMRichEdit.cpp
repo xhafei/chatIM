@@ -1,7 +1,6 @@
 // EMRichEdit.cpp : implementation file
 // Author : Alex
 // Date : 2007-5-9
-// Download by http://www.codefans.net
 #include "stdafx.h"
 #include "../EIM02Dlg.h"
 #include "stdemdef.h"

@@ -1,5 +1,4 @@
 // EM_SendChat.cpp : implementation file
-// Download by http://www.codefans.net
 
 #include "stdafx.h"
 #include "EIM02.h"

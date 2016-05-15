@@ -5,7 +5,6 @@
 #pragma once
 #endif // _MSC_VER > 1000
 // EM_FileReceiving.h : header file
-// Download by http://www.codefans.net
 /////////////////////////////////////////////////////////////////////////////
 // EM_FileReceiving window
 

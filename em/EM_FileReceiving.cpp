@@ -1,5 +1,4 @@
 // EM_FileReceiving.cpp : implementation file
-// Download by http://www.codefans.net
 
 #include "stdafx.h"
 #include "../EIM02Dlg.h"

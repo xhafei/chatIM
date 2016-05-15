@@ -68,9 +68,6 @@ BOOL _DLG_Advertise::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 	// TODO: Add extra initialization here
-//	m_web.Navigate("http://www.coopic.cn/ts/tsad/adve.htm", NULL,NULL,NULL,NULL);
-//	m_web.Navigate("adve.htm", NULL,NULL,NULL,NULL);
-	m_web.Navigate("http://www.freeeim.com/index.asp?v29", NULL,NULL,NULL,NULL);
 
 	CRect rtMain;
 	GetWindowRect(& rtMain);
@@ -97,7 +94,6 @@ void _DLG_Advertise::OnTimer(UINT nIDEvent)
 	{
 	//	AfxMessageBox("check for new adv");
 	//	m_web.Refresh();
-//		m_web.Navigate("http://www.coopic.cn/ts/tsad/adve.htm", NULL,NULL,NULL,NULL);
 	}
 	CDialog::OnTimer(nIDEvent);
 }

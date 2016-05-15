@@ -1,6 +1,5 @@
 #ifndef _FreeEIM_Package
 #define _FreeEIM_Package
-// Download by http://www.codefans.net
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000

@@ -1,5 +1,4 @@
 // EIM_ViewHistory.cpp : implementation file
-// Download by http://www.codefans.net
 
 #include "stdafx.h"
 #include "em/stdemdef.h"

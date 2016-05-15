@@ -2,7 +2,6 @@
 #include "winsock2.h"
 #include "stdemdef.h"
 #include "dos.h"
-//Download by http://www.codefans.net
 
 DWORD EM_DATA::GetLength()
 {

@@ -1,5 +1,4 @@
 // FileSendingDlg.cpp : implementation file
-// Download by http://www.codefans.net
 
 #include "stdafx.h"
 #include "../EM_MsgDlg.h"

@@ -282,8 +282,7 @@ void XEIM_MESSAGE::SetBuffer(DWORD msg, char *buf, DWORD len)
 // 一些协助函数都放到最后
 
 // XEIM 数据流处理函数，通过分隔符 Separator 来获取每个段的数据。
-// 编写日期：21:44 2009-8-18
-// FEIM 小组：飞鸽传书 www.freeeim.com
+
 
 // 使用说明：
 /* pSrcData 为输入数据流；

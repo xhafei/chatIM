@@ -1,8 +1,5 @@
 
 // WinAppEx.cpp : implementation file
-// Copyright(c) Armen Hakobyan 2002.
-// http://www.codeproject.com/script/profile/whos_who.asp?vt=arts&id=25653
-// mailto:armenh@web.am
 
 #include "stdafx.h"
 #include "WinAppEx.h"

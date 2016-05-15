@@ -1,4 +1,3 @@
-// http://www.codeproject.com/KB/system/CRegistry.aspx
 #if !defined(_REGISTRY_H_INCLUDED)
 #define _REGISTRY_H_INCLUDED
 

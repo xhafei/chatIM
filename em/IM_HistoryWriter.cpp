@@ -1,5 +1,4 @@
 // IM_HistoryWriter1.cpp : implementation file
-// Download by http://www.codefans.net
 
 #include "stdafx.h"
 #include "stdemdef.h"

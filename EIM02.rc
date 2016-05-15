@@ -84,7 +84,6 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,17,15,20,20
     LTEXT           "FreeEIM",IDC_STATIC,50,14,116,8,SS_NOPREFIX
     DEFPUSHBUTTON   "确定",IDOK,116,99,50,14,WS_GROUP
-    LTEXT           "http://www.freeeim.com/",IDC_STATIC,50,25,116,8
     EDITTEXT        IDC_EDIT1,7,48,159,42,ES_MULTILINE | ES_AUTOVSCROLL | 
                     ES_READONLY | WS_VSCROLL
 END
@@ -95,7 +94,7 @@ STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION |
 EXSTYLE WS_EX_APPWINDOW
 CAPTION "FreeEIM"
 MENU IDR_MENU1
-FONT 9, "宋体"
+FONT 9, "宋体", 0, 0, 0x1
 BEGIN
     LTEXT           "FreeEIM v1",IDC_STATIC,4,235,93,8
     CONTROL         "",IDC_LOADGIF,"Static",SS_BLACKFRAME,46,77,27,22
@@ -111,7 +110,7 @@ END
 
 IDD_DIALOG1 DIALOGEX 0, 0, 458, 246
 STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
-FONT 9, "宋体"
+FONT 9, "宋体", 0, 0, 0x1
 BEGIN
     CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",ES_MULTILINE | 
                     ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_BORDER | 
@@ -173,7 +172,7 @@ END
 IDD_SENDFILE_DIALOG DIALOGEX 0, 0, 120, 110
 STYLE DS_CONTROL | WS_CHILD
 EXSTYLE WS_EX_STATICEDGE
-FONT 9, "宋体"
+FONT 9, "宋体", 0, 0, 0x1
 BEGIN
     PUSHBUTTON      "取消",IDCANCEL,86,24,21,11
     ICON            IDR_MAINFRAME,IDC_STATIC_ICON,3,2,20,20
@@ -228,7 +227,7 @@ END
 IDD_DIALOG6 DIALOGEX 0, 0, 278, 191
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "对话"
-FONT 10, "System"
+FONT 10, "System", 0, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "确定",IDOK,159,170,50,14
     PUSHBUTTON      "取消",IDCANCEL,14,170,50,14
@@ -269,7 +268,7 @@ BEGIN
         BEGIN
             VALUE "Comments", "FreeEIM\0"
             VALUE "CompanyName", "FEIM Studios\0"
-            VALUE "FileDescription", "Free Enterprise Instant Messenger\0"
+            VALUE "FileDescription", "Free Instant Messenger\0"
             VALUE "FileVersion", " 1\0"
             VALUE "InternalName", "freeeim\0"
             VALUE "LegalCopyright", "\0"

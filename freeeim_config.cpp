@@ -3,7 +3,6 @@
 #include "thirdpartclass/INI.h"
 #include "freeeim_config.h"
 #include "em/EM_UserInfo.h"
-// Download by http://www.codefans.net
 FreeEIM_Config::FreeEIM_Config()
 {
 	m_strDisplayName = "";

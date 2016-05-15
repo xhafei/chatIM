@@ -63,7 +63,6 @@ typedef EM_DATA * LPEM_DATA;
 
 #endif // EM_MSG_DATA
 
-// 开源即时通讯软件 飞鸽传书 FreeEIM
 class EM_USERINFO
 {
 public:

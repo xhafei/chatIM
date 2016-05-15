@@ -42,7 +42,6 @@ CHtmlEditCtrl2::~CHtmlEditCtrl2()
 }
 
 /*
-IZ: Function to retive all tags that contains images (like <img src="http://www.server.com/image.jpg>") from HTML document
 	Was not present in orginal CHtmlEditCtrlBase
 */
 HRESULT CHtmlEditCtrl2::GetURLsOfAllImages(CStringArray& a_arrImages)

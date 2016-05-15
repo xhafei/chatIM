@@ -256,7 +256,6 @@ protected:
 							 long nExecOpt = OLECMDEXECOPT_DODEFAULT);
 
 
-//IZ conversion code taken from: http://www.flounder.com/
 public:
 	static void BSTR2CString(BSTR b, CString& s)
 	{
